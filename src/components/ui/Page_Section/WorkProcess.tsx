@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import HeadLine from '../HeadLine';
 import Card from '../Card';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
@@ -33,28 +32,46 @@ function WorkProcess() {
         // backgroundAttachment: 'fixed',
         backfaceVisibility: 'hidden',
       }}
-      className="relative flex items-center flex-col py-12 lg:py-28 xl:py-48 justify-center px-2"
+      className="relative flex items-center gap-12 md:gap-24 justify-between flex-col py-8 md:pt-28 md:pb-16 px-2"
     >
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-tr from-transparent via-transparent to-black"></div>
-      <div className="w-fit z-[999]">
-        <HeadLine
-          title="How It Works"
-          description="We break down the process into simple steps to ensure seamless execution, from start to finish."
-        />
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-tr from-transparent via-black to-black"></div>
+      <div className='flex items-center justify-center flex-col'>
+        <div className="w-fit z-[999]">
+          <motion.h1
+            className="text-3xl md:text-5xl font-bold text-center text-white  bg-clip-text"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={
+              { duration: 0.8, ease: 'easeOut' }
+            }
+          >
+            How It Works
+          </motion.h1>
+          <motion.h1
+            className="text-xl font-normal mt-3 text-center mb-8 text-white  bg-clip-text"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={
+              { duration: 0.8, ease: 'easeOut' }
+            }
+          >
+            We break the process down into 3 simple steps
+          </motion.h1>
+        </div>
+        <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4">
+          {data.map((item) => {
+            return (
+              <Card
+                key={item.id}
+                title={item.title}
+                description={item.description}
+                id={item.id}
+              />
+            );
+          })}
+        </div>
       </div>
-      <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4">
-        {data.map((item) => {
-          return (
-            <Card
-              key={item.id}
-              title={item.title}
-              description={item.description}
-              id={item.id}
-            />
-          );
-        })}
-      </div>
-      <div className="mt-6">
+      <div>
         <Link
           href="https://www.facebook.com/messages/t/betcollective"
           target="_blank"

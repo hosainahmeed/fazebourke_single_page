@@ -4,8 +4,6 @@ import { motion } from 'framer-motion';
 import { Shield, Lock, Zap } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import IconImage from '@/components/minimul/IconImage';
-import Lottie from 'lottie-react';
-import animationData from '@/../public/down_arrow.json';
 const HeroSection = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isLoaded, setIsLoaded] = useState(false);
@@ -68,7 +66,7 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="bg-[#000000]">
+    <div className="bg-[#000000] min-h-screen pb-4">
       <div className="bg-gradient-to-b from-gray-900 via-gray-800 to-black w-full pt-12 pb-28  flex items-center px-4 sm:px-6 md:px-8 lg:px-16 sm:py-10 md:py-12 relative overflow-hidden">
         {isLoaded && (
           <>
@@ -209,7 +207,7 @@ const HeroSection = () => {
                       </motion.span>
                     ))}
                     <br />
-                    {'BETTING ACCOUNTS.'.split('').map((char, i) => (
+                    {'BETTING ACCOUNTS'.split('').map((char, i) => (
                       <motion.span
                         key={i + 100}
                         custom={i}
@@ -244,18 +242,18 @@ const HeroSection = () => {
 
                 {/* Subtext - better responsive text size */}
                 <motion.p
-                  className="text-white text-base mt-6 md:mt-12 sm:text-sm md:text-base max-w-screen-sm  lg:text-lg mb-4 sm:mb-5 md:mb-6 lg:mb-8"
+                  className="text-white text-base mt-6 md:mt-12 sm:text-sm md:text-base max-w-screen-sm  lg:text-2xl mb-4 sm:mb-5 md:mb-6 lg:mb-8"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 1, duration: 0.6 }}
                 >
-                  Trusted By 500+ Aussies Who Have Partnered With Us{' '}
-                  <br className="sm:block hidden" /> Safe , Secure , Hassle-Free
+                  Trusted By 500+ Aussies.
+                  <br className="sm:block hidden" /> Safe. Secure. Hassle-Free.
                 </motion.p>
 
                 {/* CTA Button - better responsive sizing and mobile full-width */}
                 <motion.button
-                  className="bg-[#F97316] mt-6 mb-12 uppercase hover:cursor-pointer hover:bg-[#F97316] text-white font-bold py-2 sm:py-3 md:py-4 px-4 w-fit sm:w-auto md:px-6 lg:px-12 rounded-md text-sm sm:text-base md:text-lg duration-300 relative overflow-hidden hover:scale-102 transition-all"
+                  className="bg-[#F97316] text-xl mt-6 mb-12 uppercase hover:cursor-pointer hover:bg-[#F97316] text-white font-bold py-2 sm:py-3 md:py-4 px-4 w-fit sm:w-auto md:px-6 lg:px-12 rounded-md  md:text-2xl duration-300 relative overflow-hidden hover:scale-102 transition-all"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 1.2, duration: 0.5 }}
@@ -265,7 +263,7 @@ const HeroSection = () => {
                   whileTap={{ scale: 0.95 }}
                 >
                   <motion.span
-                    className="absolute inset-0 uppercase bg-[#F97316] "
+                    className="absolute inset-0 uppercase bg-[#F97316]"
                     initial={{ x: '-100%' }}
                     whileHover={{ x: '100%' }}
                     transition={{ duration: 0.6 }}
@@ -398,19 +396,19 @@ const HeroSection = () => {
                       windowWidth < 640
                         ? 200
                         : windowWidth < 768
-                        ? 240
-                        : windowWidth > 1650
-                        ? 380
-                        : 500
+                          ? 240
+                          : windowWidth > 1650
+                            ? 380
+                            : 500
                     }
                     height={
                       windowWidth < 640
                         ? 200
                         : windowWidth < 768
-                        ? 240
-                        : windowWidth > 1024
-                        ? 300
-                        : 450
+                          ? 240
+                          : windowWidth > 1024
+                            ? 300
+                            : 450
                     }
                     className="object-contain   !w-[400px]  !h-[400px] xl:!w-[450px] xl:!h-[450px] "
                   />
@@ -436,7 +434,7 @@ const HeroSection = () => {
                   className="w-full h-full"
                 />
               </motion.div>
-              <span className="text-white text-xs mt-3 sm:text-sm">
+              <span className="text-white text-xs  sm:text-sm">
                 Facebook Rating
                 <div className="flex items-center mb-1 sm:mb-2">
                   <div className="flex text-yellow-400 mb-1">
@@ -461,9 +459,10 @@ const HeroSection = () => {
                     ))}
                   </div>
                   <span className="text-white ml-2 text-xs sm:text-sm">
-                    5 / 5
+                    4.9 / 5
                   </span>
                 </div>
+                <span className='text-sm underline leading-none'>Why People Trust Us</span>
               </span>
             </motion.div>
           </div>
@@ -490,7 +489,7 @@ const HeroSection = () => {
                   className="w-full h-full"
                 />
               </motion.div>
-              <span className="text-white mt-4 text-sm md:text-base lg:text-lg">
+              <span className="text-white leading-none text-sm md:text-base lg:text-lg">
                 Facebook Rating
                 <div className="flex items-center mb-1 md:mb-2">
                   <div className="flex text-yellow-400 mb-1">
@@ -514,20 +513,17 @@ const HeroSection = () => {
                       </motion.span>
                     ))}
                   </div>
-                  <span className="text-white ml-2 text-xs md:text-sm lg:text-base">
-                    5 / 5
+                  <span className="text-white ml-2 text-xs md:text-sm leading-none lg:text-base">
+                    4.9 / 5
                   </span>
                 </div>
+                <span className='text-sm underline leading-none'>Why People Trust Us</span>
               </span>
             </motion.div>
           </motion.div>
         </div>
       </div>
-      <div className='w-full lg:flex hidden  items-center justify-center py-12'>
-        <div className="w-16 h-16 rounded-full opacity-50  border-2 border-white overflow-hidden p-3">
-          <Lottie animationData={animationData} className="w-full h-full" />
-        </div>
-      </div>
+
     </div>
   );
 };

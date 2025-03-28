@@ -10,7 +10,7 @@ function MessageSection() {
         <div className="gradient-ellipse"></div>
         <div className="flex-1 text-left">
           <h1 className="text-white text-lg sm:text-2xl !z-[999] relative md:text-3xl lg:text-4xl xl:text-5xl font-semibold leading-tight">
-            Join 500+ Aussies <br /> “Become a partner today!”
+            Join 500+ Aussies <br /> Become a partner today!
           </h1>
           <Link
             href="https://www.facebook.com/messages/t/betcollective"

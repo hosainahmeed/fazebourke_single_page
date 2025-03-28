@@ -2,6 +2,7 @@
 import { useRef, useState, useEffect } from 'react';
 import { motion, useScroll, useTransform, useInView } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 
 type ReferralStepProps = {
   number?: string;
@@ -71,20 +72,19 @@ const ReferralStep = ({
       initial={isMobile ? 'visible' : 'hidden'}
       animate={isMobile ? 'visible' : isInView ? 'visible' : 'hidden'}
       variants={isMobile ? mobileVariants : desktopVariants}
-      className={`flex items-center my-12  ${
-        alignment === 'left' ? 'md:justify-end md:pr-12 pr-4' : 'md:pl-12 pl-4'
-      } max-w-full`}
+      className={`flex items-center ${isMobile ? '' : 'my-12'} ${alignment === 'left' ? 'md:justify-end md:pr-12 pr-4 ' : 'md:pl-12 pl-4'
+        } max-w-full`}
     >
       <div
-        className={`  ${isMobile && icon ? 'hidden' : ''} ${
-          isMobile ? 'backdrop-blur-sm p-6 rounded-xl shadow-lg border' : ''
-        } border-blue-500/20 hover:border-blue-500/50 ml-2 transition-all duration-300 max-w-md w-full`}
+        className={`${isMobile && icon ? 'hidden' : ''} ${isMobile ? 'backdrop-blur-sm p-6 mt-3 rounded-xl shadow-lg border' : ''
+          } border-blue-500/20 hover:border-blue-500/50 ml-2 transition-all duration-300 max-w-md w-full`}
       >
         <motion.div
           className="flex justify-center mb-8"
           variants={isMobile ? mobileChildVariants : childVariants}
         >
-          <div className="text-blue-500 bg-white p-4 rounded-md">{icon}</div>
+          {!isMobile && icon ? <div className="text-blue-500 bg-white p-4 rounded-md">{icon}</div> : ""}
+
         </motion.div>
         <motion.h2
           className="font-bold text-lg xl:text-3xl mb-2 bg-gradient-to-r from-white to-purple-600 text-transparent bg-clip-text"
@@ -99,7 +99,7 @@ const ReferralStep = ({
           {title}
         </motion.h3>
         <motion.p
-          className="text-sm xl:text-base text-white  dark:text-gray-300"
+          className="text-sm xl:text-base text-white capitalize  dark:text-gray-300"
           variants={isMobile ? mobileChildVariants : childVariants}
         >
           {description}
@@ -163,7 +163,7 @@ const ReferralProgram = () => {
           alt="Logo"
           width={100}
           height={100}
-          className="w-24 h-24"
+          className="w-24 h-24 object-center object-contain"
         />
       ),
       alignment: 'left',
@@ -179,7 +179,7 @@ const ReferralProgram = () => {
       number: '02',
       title: 'They Message Us',
       description:
-        'We’ll respond promptly, get them set up, and make sure we know you sent them.',
+        'We’ll Respond Promptly, Get Them Setup, And Find Out It Was You That Sent Them',
       alignment: 'right',
     },
     {
@@ -189,7 +189,7 @@ const ReferralProgram = () => {
           alt="Logo"
           width={100}
           height={100}
-          className="w-24 h-24"
+          className="w-24 h-24 object-center object-contain"
         />
       ),
       alignment: 'left',
@@ -201,7 +201,7 @@ const ReferralProgram = () => {
           alt="Logo"
           width={100}
           height={100}
-          className="w-24 h-24"
+          className="w-24 h-24 object-center object-contain"
         />
       ),
       alignment: 'left',
@@ -245,7 +245,7 @@ const ReferralProgram = () => {
           invite mates - both make $$$
         </motion.h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 relative">
+        <div className="grid grid-cols-1 md:grid-cols-2 md:gap-4 relative">
           {/* Timeline line - visible on tablet and up */}
           <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-[3px] bg-gray-500 dark:bg-gray-700/30">
             <motion.div
@@ -275,9 +275,8 @@ const ReferralProgram = () => {
             {nodePositions.map((pos, index) => (
               <div key={index} style={{ top: `${pos}%` }} className="absolute">
                 <div
-                  className={`absolute left-1/2 hidden lg:block transform -translate-x-1/2 w-6 h-6 rounded-full border-2 border-blue-500 z-10 ${
-                    scrollYProgress.get() * 100 >= pos ? 'bg-blue-500' : ''
-                  }`}
+                  className={`absolute left-1/2 hidden lg:block transform -translate-x-1/2 w-6 h-6 rounded-full border-2 border-blue-500 z-10 ${scrollYProgress.get() * 100 >= pos ? 'bg-blue-500' : ''
+                    }`}
                 />
               </div>
             ))}
@@ -331,6 +330,33 @@ const ReferralProgram = () => {
             </>
           )}
         </div>
+      </div>
+      <div className='flex items-center justify-center w-full pt-12'>
+        <Link
+          href="https://www.facebook.com/messages/t/betcollective"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="!underline cursor-pointer hover:text-blue-500"
+        >
+          <motion.button
+            className="bg-[#F97316] text-xl mt-6  uppercase hover:cursor-pointer hover:bg-[#F97316] text-white font-bold py-2 sm:py-3 md:py-4 px-4 w-fit sm:w-auto md:px-6 lg:px-12 rounded-md  md:text-2xl duration-300 relative overflow-hidden hover:scale-102 transition-all"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.2, duration: 0.5 }}
+            whileHover={{
+              scale: 1.05,
+            }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <motion.span
+              className="absolute inset-0 uppercase bg-[#F97316]"
+              initial={{ x: '-100%' }}
+              whileHover={{ x: '100%' }}
+              transition={{ duration: 0.6 }}
+            />
+            MESSAGE US NOW
+          </motion.button>
+        </Link>
       </div>
     </div>
   );

@@ -15,7 +15,7 @@ const FrequentlyAskedQuestions = () => {
     {
       question: 'What if I already have sports betting accounts?',
       answer:
-        ' You’ll pass on your existing logins to us to use during the partnership. If you would like to keep an account, we can work that out with you',
+        ' You’ll pass on your existing logins to us to use during the partnership. If you would like to keep an account, we can work that out with you.',
     },
     {
       question: 'What if I haven’t created any sports betting accounts?',
@@ -25,16 +25,16 @@ const FrequentlyAskedQuestions = () => {
     {
       question: 'Is my personal information safe and secure?',
       answer:
-        'Absolutely. (Paragraph) Our submission forms use 256 bit SSL encryption which is the same protection level used by online banking and e-commerce providers. We value your privacy and take the security of your personal information seriously.Your data will never be shared or sold to any third-parties.',
+        'Absolutely. Our submission forms use 256 bit SSL encryption which is the same protection level used by online banking and e-commerce providers. We value your privacy and take the security of your personal information seriously. Your data will never be shared or sold to any third-parties.',
     },
     {
       question: 'Which betting accounts do you create?',
-      answer: 'We use the main corporate bookmakers in Australia',
+      answer: 'We use the main corporate bookmakers in Australia.',
     },
     {
       question: 'Why do we want your accounts?',
       answer:
-        ' We use a strategy called “matched betting” that uses promotions. We access these promos to continue betting and pay you some of the profit upfront. Feel free to research “matched betting” to learn more',
+        ' We use a strategy called “matched betting” that uses promotions. We access these promos to continue betting and pay you some of the profit upfront. Feel free to research “matched betting” to learn more.',
     },
     {
       question: 'How do I contact you?',
@@ -52,7 +52,9 @@ const FrequentlyAskedQuestions = () => {
   ];
 
   return (
-    <div className="bg-black relative bg-cover bg-center md:py-28 bg-no-repeat py-10">
+    <div style={{
+      backgroundImage:`url(/Image/faq.jpg)`
+    }}  className=" relative bg-cover bg-center md:py-28 bg-no-repeat py-10">
       <div className="absolute top-0 left-0 w-full h-full bg-black opacity-80"></div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="text-white text-3xl relative z-[999] md:text-4xl font-semibold text-center mb-8">

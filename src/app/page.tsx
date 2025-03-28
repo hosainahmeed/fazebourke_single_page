@@ -1,15 +1,12 @@
-'use client'
-import dynamic from 'next/dynamic';
+import HeroSection from '@/components/ui/Page_Section/HeroSection';
+import WorkProcess from '@/components/ui/Page_Section/WorkProcess';
+import RefferralProgram from '@/components/ui/Page_Section/ReferralProgram';
+import React from 'react';
+import FrequentlyAskedQuestions from '@/components/ui/Page_Section/FrequentlyAskedQuestions';
+import MessageSection from '@/components/ui/Page_Section/MessageSection';
+import Footer from '@/components/ui/Page_Section/Footer';
 
-// Dynamically import components with ssr: false
-const HeroSection = dynamic(() => import('@/components/ui/Page_Section/HeroSection'), { ssr: false });
-const WorkProcess = dynamic(() => import('@/components/ui/Page_Section/WorkProcess'), { ssr: false });
-const RefferralProgram = dynamic(() => import('@/components/ui/Page_Section/ReferralProgram'), { ssr: false });
-const FrequentlyAskedQuestions = dynamic(() => import('@/components/ui/Page_Section/FrequentlyAskedQuestions'), { ssr: false });
-const MessageSection = dynamic(() => import('@/components/ui/Page_Section/MessageSection'), { ssr: false });
-const Footer = dynamic(() => import('@/components/ui/Page_Section/Footer'), { ssr: false });
-
-function Page() {
+function page() {
   return (
     <div>
       <HeroSection />
@@ -22,4 +19,4 @@ function Page() {
   );
 }
 
-export default Page;
+export default page;
