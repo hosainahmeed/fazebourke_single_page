@@ -330,8 +330,7 @@ const ReferralProgram = () => {
             </>
           )}
         </div>
-      </div>
-      <div className='flex items-center justify-center w-full pt-12'>
+        <div className='flex items-center justify-center w-full lg:pt-12'>
         <Link
           href="https://www.facebook.com/messages/t/betcollective"
           target="_blank"
@@ -349,7 +348,7 @@ const ReferralProgram = () => {
             whileTap={{ scale: 0.95 }}
           >
             <motion.span
-              className="absolute inset-0 uppercase bg-[#F97316]"
+              className="absolute inset-0 uppercase bg-[#21f916]"
               initial={{ x: '-100%' }}
               whileHover={{ x: '100%' }}
               transition={{ duration: 0.6 }}
@@ -358,6 +357,8 @@ const ReferralProgram = () => {
           </motion.button>
         </Link>
       </div>
+      </div>
+   
     </div>
   );
 };
