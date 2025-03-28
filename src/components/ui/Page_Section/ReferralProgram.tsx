@@ -72,39 +72,39 @@ const ReferralStep = ({
       initial={isMobile ? 'visible' : 'hidden'}
       animate={isMobile ? 'visible' : isInView ? 'visible' : 'hidden'}
       variants={isMobile ? mobileVariants : desktopVariants}
-      className={`flex items-center ${isMobile ? '' : 'my-12'} ${alignment === 'left' ? 'md:justify-end md:pr-12 pr-4 ' : 'md:pl-12 pl-4'
+      className={`flex items-center ${isMobile ? '' : 'my-12'} ${alignment === 'left' ? 'md:px-12 pr-4 ' : 'md:pl-12 pl-4'
         } max-w-full`}
     >
       <div
         className={`${isMobile && !title ? 'hidden' : ''} ${isMobile ? 'backdrop-blur-sm p-6 mt-3 rounded-xl shadow-lg border' : ''
-      } border-blue-500/20 hover:border-blue-500/50 ml-4 transition-all duration-300 max-w-md w-full`}
+          } border-blue-500/20 hover:border-blue-500/50 ml-4 transition-all duration-300 max-w-md w-full`}
       >
-      <motion.div
-        className="flex justify-center mb-8"
-        variants={isMobile ? mobileChildVariants : childVariants}
-      >
-        <div className="text-blue-500 bg-white p-4 rounded-md">{icon}</div>
+        <motion.div
+          className="flex justify-center mb-8"
+          variants={isMobile ? mobileChildVariants : childVariants}
+        >
+          <div className="text-blue-500 bg-white p-4 rounded-md">{icon}</div>
 
-      </motion.div>
-      <motion.h2
-        className="font-bold text-lg xl:text-3xl mb-2 bg-gradient-to-r from-white to-purple-600 text-transparent bg-clip-text"
-        variants={isMobile ? mobileChildVariants : childVariants}
-      >
-        {number}
-      </motion.h2>
-      <motion.h3
-        className="font-bold text-lg text-white xl:text-xl mb-4"
-        variants={isMobile ? mobileChildVariants : childVariants}
-      >
-        {title}
-      </motion.h3>
-      <motion.p
-        className="text-sm xl:text-base text-white capitalize  dark:text-gray-300"
-        variants={isMobile ? mobileChildVariants : childVariants}
-      >
-        {description}
-      </motion.p>
-    </div>
+        </motion.div>
+        <motion.h2
+          className="font-bold text-lg xl:text-3xl mb-2 bg-gradient-to-r from-white to-purple-600 text-transparent bg-clip-text"
+          variants={isMobile ? mobileChildVariants : childVariants}
+        >
+          {number}
+        </motion.h2>
+        <motion.h3
+          className="font-bold text-lg text-white xl:text-xl mb-4"
+          variants={isMobile ? mobileChildVariants : childVariants}
+        >
+          {title}
+        </motion.h3>
+        <motion.p
+          className="text-sm xl:text-base text-white capitalize  dark:text-gray-300"
+          variants={isMobile ? mobileChildVariants : childVariants}
+        >
+          {description}
+        </motion.p>
+      </div>
     </motion.div >
   );
 };
@@ -166,7 +166,7 @@ const ReferralProgram = () => {
           className="w-24 h-24 object-center md:block hidden object-contain"
         />
       ),
-      alignment: 'left',
+      alignment: 'right',
     },
     {
       icon: (
@@ -182,7 +182,7 @@ const ReferralProgram = () => {
       title: 'Tell Your Friends & Family',
       description:
         'Introducing Our Referral Program. You Can Earn An Extra $200 For Each Successful Referral!',
-      alignment: 'right',
+      alignment: 'left',
     },
     {
       icon: (
@@ -198,7 +198,7 @@ const ReferralProgram = () => {
       title: 'They Message Us',
       description:
         'We’ll Respond Promptly, Get Them Setup, And Find Out It Was You That Sent Them',
-      alignment: 'right',
+      alignment: 'left',
     },
     {
       icon: (
@@ -210,7 +210,7 @@ const ReferralProgram = () => {
           className="w-24 h-24 object-center object-contain"
         />
       ),
-      alignment: 'left',
+      alignment: 'right',
     },
     {
       icon: (
@@ -238,7 +238,6 @@ const ReferralProgram = () => {
       title: 'Cash In!',
       description:
         "Once Their Application Is Approved, We'll Send You Up To $200 For Each Person You Referred.",
-
       alignment: 'left',
     },
   ];

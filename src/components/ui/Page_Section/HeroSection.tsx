@@ -66,7 +66,7 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="bg-gradient-to-b from-gray-900 min-h-screen via-gray-800 to-black md:py-28 flex items-center justify-center">
+    <div className="bg-gradient-to-b from-gray-900 py-12 via-gray-800 to-black md:py-28 flex items-center justify-center">
       <div className=" w-full pt-12 md:pb-28 pb-12  flex items-center px-4 sm:px-6 md:px-8 lg:px-16 md:py-12 relative overflow-hidden">
         {isLoaded && (
           <>
