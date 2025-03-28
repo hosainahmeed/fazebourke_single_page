@@ -11,7 +11,7 @@ function MessageSection() {
       <div className="container mx-auto overflow-hidden sm:flex-row flex-col-reverse rounded-md xl:rounded-2xl py-6 px-4 md:px-8 lg:px-12 xl:px-24 relative flex  items-center justify-between bg-[#101828]">
         <div className="gradient-ellipse"></div>
         <div className="flex-1 text-left">
-          <h1 claassName="text-white text-2xl sm:text-2xl !z-[999] relative md:text-3xl lg:text-4xl xl:text-5xl font-semibold leading-tight">
+          <h1 className="text-white text-2xl sm:text-2xl !z-[999] relative md:text-3xl lg:text-4xl xl:text-5xl font-semibold leading-tight">
             Join 500+ Aussies <br /> Become a partner today!
           </h1>
           <Link
