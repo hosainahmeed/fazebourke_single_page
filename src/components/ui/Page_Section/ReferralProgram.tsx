@@ -221,9 +221,9 @@ const ReferralProgram = () => {
   return (
     <div
       ref={containerRef}
-      className="relative bg-gradient-to-b from-[#16222E] to-[#5E7893] overflow-hidden py-20 px-4  flex flex-col justify-center"
+      className="relative bg-gradient-to-b from-[#16222E] to-[#5E7893] overflow-hidden md:py-20 px-4  flex flex-col justify-center"
     >
-      <div className="max-w-6xl mx-auto min-h-screen">
+      <div className="max-w-6xl mx-auto py-12">
         <motion.h1
           className="text-3xl md:text-5xl font-bold text-center text-white  bg-clip-text"
           initial={isMobile ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
