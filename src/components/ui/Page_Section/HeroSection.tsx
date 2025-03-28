@@ -66,8 +66,8 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="bg-[#000000] min-h-screen pb-4">
-      <div className="bg-gradient-to-b from-gray-900 via-gray-800 to-black w-full pt-12 pb-28  flex items-center px-4 sm:px-6 md:px-8 lg:px-16 sm:py-10 md:py-12 relative overflow-hidden">
+    <div className="bg-[#000000]  min-h-screen">
+      <div className="bg-gradient-to-b  from-gray-900 via-gray-800 to-black w-full pt-12 pb-28  flex items-center px-4 sm:px-6 md:px-8 lg:px-16 md:py-12 relative overflow-hidden">
         {isLoaded && (
           <>
             {/* Animated background elements - more visible on larger screens */}
@@ -222,14 +222,14 @@ const HeroSection = () => {
                       </motion.span>
                     ))}
                   </motion.h1>
-                  <motion.h1 className="text-white uppercase md:hidden text-4xl mt-12 sm:text-3xl md:text-3xl lg:text-4xl xl:text-6xl font-bold leading-tight">
-                    Land Your Sports Betting Accounts.{' '}
+                  <motion.h1 className="text-white  uppercase md:hidden text-4xl mt-28 font-bold leading-tight">
+                    Land Your Sports Betting Accounts.
                   </motion.h1>
                 </div>
 
                 {/* CTA text - improved responsive scaling */}
                 <motion.h2
-                  className="text-green-400 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-3 sm:mb-4 md:mb-5 lg:mb-6"
+                  className="text-green-400  text-4xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-3 sm:mb-4 md:mb-5 lg:mb-6"
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.8, duration: 0.6 }}
@@ -242,7 +242,7 @@ const HeroSection = () => {
 
                 {/* Subtext - better responsive text size */}
                 <motion.p
-                  className="text-white text-base mt-6 md:mt-12 sm:text-sm md:text-base max-w-screen-sm  lg:text-2xl mb-4 sm:mb-5 md:mb-6 lg:mb-8"
+                  className="text-white text-xl pr-38 lg:pr-0 mt-6 md:mt-12 sm:text-xl md:text-base max-w-screen-sm  lg:text-2xl mb-4 sm:mb-5 md:mb-6 lg:mb-8"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 1, duration: 0.6 }}
@@ -253,7 +253,7 @@ const HeroSection = () => {
 
                 {/* CTA Button - better responsive sizing and mobile full-width */}
                 <motion.button
-                  className="bg-[#F97316] text-xl mt-6 mb-12 uppercase hover:cursor-pointer hover:bg-[#F97316] text-white font-bold py-2 sm:py-3 md:py-4 px-4 w-fit sm:w-auto md:px-6 lg:px-12 rounded-md  md:text-2xl duration-300 relative overflow-hidden hover:scale-102 transition-all"
+                  className="bg-[#F97316] md:mt-0 mt-12 text-xl mb-12 uppercase hover:cursor-pointer hover:bg-[#F97316] text-white font-bold py-2 sm:py-3 md:py-4 px-4 w-fit sm:w-auto md:px-6 lg:px-12 rounded-md  md:text-2xl duration-300 relative overflow-hidden hover:scale-102 transition-all"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 1.2, duration: 0.5 }}
@@ -310,7 +310,7 @@ const HeroSection = () => {
                   ].map((item, i) => (
                     <motion.div
                       key={i}
-                      className="flex items-center text-white text-xs sm:text-sm md:text-base"
+                      className="flex items-center text-white text-xl"
                       custom={i}
                       variants={iconVariants}
                       initial="initial"
@@ -418,10 +418,10 @@ const HeroSection = () => {
           </motion.div>
 
           {/* Mobile reviews section - better spacing and improved for small screens */}
-          <div className="block lg:hidden mt-12 sm:mt-10">
-            <motion.div className="flex items-center mb-1 h-12 sm:mb-2">
+          <div className="block lg:hidden !mt-28">
+            <motion.div className="flex items-center mb-1 h-24 sm:mb-2">
               <motion.div
-                className="bg-blue-600 rounded-full w-12 h-full p-1 mr-2"
+                className="bg-blue-600 rounded-full w-24 h-full p-1 mr-2"
                 whileHover={{
                   boxShadow: '0 0 10px rgba(59, 130, 246, 0.7)',
                 }}
@@ -429,12 +429,12 @@ const HeroSection = () => {
                 <Image
                   src="/_Facebook.svg"
                   alt="Facebook"
-                  width={16}
-                  height={16}
+                  width={132}
+                  height={132}
                   className="w-full h-full"
                 />
               </motion.div>
-              <span className="text-white text-xs  sm:text-sm">
+              <span className="text-white text-xl">
                 Facebook Rating
                 <div className="flex items-center mb-1 sm:mb-2">
                   <div className="flex text-yellow-400 mb-1">
@@ -449,7 +449,7 @@ const HeroSection = () => {
                           color: i === 4 ? '#FCD34D' : '#FCD34D',
                           textShadow: '0 0 8px rgba(252, 211, 77, 0.8)',
                         }}
-                        className="text-sm sm:text-base"
+                        className="text-xl "
                         style={{
                           textShadow: '0 0 15px rgba(74, 222, 128, 0.4)',
                         }}
@@ -462,7 +462,7 @@ const HeroSection = () => {
                     4.9 / 5
                   </span>
                 </div>
-                <span className='text-sm underline leading-none'>Why People Trust Us</span>
+                <span className='text-xl underline leading-none'>Why People Trust Us</span>
               </span>
             </motion.div>
           </div>
