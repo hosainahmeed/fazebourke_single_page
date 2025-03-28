@@ -34,7 +34,7 @@ function WorkProcess() {
       }}
       className="relative flex items-center gap-12 md:gap-24 justify-between flex-col py-8 md:pt-28 md:pb-16 px-2"
     >
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-tr from-transparent via-black to-black"></div>
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-tr from-transparent via-transparent to-black"></div>
       <div className='flex items-center justify-center flex-col'>
         <div className="w-fit z-[999]">
           <motion.h1
@@ -55,7 +55,7 @@ function WorkProcess() {
               { duration: 0.8, ease: 'easeOut' }
             }
           >
-            We break the process down into 3 simple steps
+             3 simple steps
           </motion.h1>
         </div>
         <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4">
@@ -78,7 +78,7 @@ function WorkProcess() {
           rel="noopener noreferrer"
           className="!underline cursor-pointer hover:text-blue-500"
         >
-          <motion.button className="bg-[#0F14B6] mt-6 mb-12 hover:cursor-pointer hover:bg-[#0F14B6] text-white font-bold py-2 sm:py-3 md:py-4 px-4 w-fit sm:w-auto md:px-6 lg:px-12 rounded-md text-sm sm:text-base md:text-lg duration-300 relative overflow-hidden hover:scale-102 transition-all">
+          <motion.button className="bg-[#0F14B6] mt-6 mb-12 hover:cursor-pointer hover:bg-[#0F14B6] text-white font-bold py-2 sm:py-3 md:py-4 px-4 w-fit sm:w-auto md:px-6 lg:px-12 rounded-md text-xl sm:text-xl md:text-2xl duration-300 relative overflow-hidden hover:scale-102 transition-all">
             MESSAGE US NOW
           </motion.button>
         </Link>

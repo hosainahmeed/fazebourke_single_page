@@ -1,7 +1,9 @@
+'use client'
 import React from 'react';
 import Image from 'next/image';
 import img from '@/../public/sitting-person.svg';
 import Link from 'next/link';
+import { motion } from 'framer-motion'
 
 function MessageSection() {
   return (
@@ -9,7 +11,7 @@ function MessageSection() {
       <div className="container mx-auto overflow-hidden sm:flex-row flex-col-reverse rounded-md xl:rounded-2xl py-6 px-4 md:px-8 lg:px-12 xl:px-24 relative flex  items-center justify-between bg-[#101828]">
         <div className="gradient-ellipse"></div>
         <div className="flex-1 text-left">
-          <h1 className="text-white text-lg sm:text-2xl !z-[999] relative md:text-3xl lg:text-4xl xl:text-5xl font-semibold leading-tight">
+          <h1 claassName="text-white text-2xl sm:text-2xl !z-[999] relative md:text-3xl lg:text-4xl xl:text-5xl font-semibold leading-tight">
             Join 500+ Aussies <br /> Become a partner today!
           </h1>
           <Link
@@ -18,9 +20,24 @@ function MessageSection() {
             rel="noopener noreferrer"
             className="!underline cursor-pointer hover:text-blue-500"
           >
-            <button className="uppercase bg-[#F97316] font-semibold xl:text-2xl px-4 py-2 mt-4 md:px-6 md:py-3 rounded-md text-white  sm:text-sm md:text-md transition-transform transform hover:scale-105">
+            <motion.button
+              className="bg-[#F97316] text-xl mt-6  uppercase hover:cursor-pointer hover:bg-[#F97316] text-white font-bold py-2 sm:py-3 md:py-4 px-4 w-fit sm:w-auto md:px-6 lg:px-12 rounded-md  md:text-2xl duration-300 relative overflow-hidden hover:scale-102 transition-all"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.2, duration: 0.5 }}
+              whileHover={{
+                scale: 1.05,
+              }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <motion.span
+                className="absolute inset-0 uppercase bg-[#21f916]"
+                initial={{ x: '-100%' }}
+                whileHover={{ x: '100%' }}
+                transition={{ duration: 0.6 }}
+              />
               MESSAGE US NOW
-            </button>
+            </motion.button>
           </Link>
         </div>
 

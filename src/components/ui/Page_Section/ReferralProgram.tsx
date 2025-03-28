@@ -76,36 +76,36 @@ const ReferralStep = ({
         } max-w-full`}
     >
       <div
-        className={`${isMobile && icon ? 'hidden' : ''} ${isMobile ? 'backdrop-blur-sm p-6 mt-3 rounded-xl shadow-lg border' : ''
-          } border-blue-500/20 hover:border-blue-500/50 ml-2 transition-all duration-300 max-w-md w-full`}
+        className={`${isMobile && !title ? 'hidden' : ''} ${isMobile ? 'backdrop-blur-sm p-6 mt-3 rounded-xl shadow-lg border' : ''
+      } border-blue-500/20 hover:border-blue-500/50 ml-4 transition-all duration-300 max-w-md w-full`}
       >
-        <motion.div
-          className="flex justify-center mb-8"
-          variants={isMobile ? mobileChildVariants : childVariants}
-        >
-          {!isMobile && icon ? <div className="text-blue-500 bg-white p-4 rounded-md">{icon}</div> : ""}
+      <motion.div
+        className="flex justify-center mb-8"
+        variants={isMobile ? mobileChildVariants : childVariants}
+      >
+        <div className="text-blue-500 bg-white p-4 rounded-md">{icon}</div>
 
-        </motion.div>
-        <motion.h2
-          className="font-bold text-lg xl:text-3xl mb-2 bg-gradient-to-r from-white to-purple-600 text-transparent bg-clip-text"
-          variants={isMobile ? mobileChildVariants : childVariants}
-        >
-          {number}
-        </motion.h2>
-        <motion.h3
-          className="font-bold text-lg text-white xl:text-xl mb-4"
-          variants={isMobile ? mobileChildVariants : childVariants}
-        >
-          {title}
-        </motion.h3>
-        <motion.p
-          className="text-sm xl:text-base text-white capitalize  dark:text-gray-300"
-          variants={isMobile ? mobileChildVariants : childVariants}
-        >
-          {description}
-        </motion.p>
-      </div>
-    </motion.div>
+      </motion.div>
+      <motion.h2
+        className="font-bold text-lg xl:text-3xl mb-2 bg-gradient-to-r from-white to-purple-600 text-transparent bg-clip-text"
+        variants={isMobile ? mobileChildVariants : childVariants}
+      >
+        {number}
+      </motion.h2>
+      <motion.h3
+        className="font-bold text-lg text-white xl:text-xl mb-4"
+        variants={isMobile ? mobileChildVariants : childVariants}
+      >
+        {title}
+      </motion.h3>
+      <motion.p
+        className="text-sm xl:text-base text-white capitalize  dark:text-gray-300"
+        variants={isMobile ? mobileChildVariants : childVariants}
+      >
+        {description}
+      </motion.p>
+    </div>
+    </motion.div >
   );
 };
 
@@ -163,12 +163,21 @@ const ReferralProgram = () => {
           alt="Logo"
           width={100}
           height={100}
-          className="w-24 h-24 object-center object-contain"
+          className="w-24 h-24 object-center md:block hidden object-contain"
         />
       ),
       alignment: 'left',
     },
     {
+      icon: (
+        <Image
+          src="/Image/img1.png"
+          alt="Logo"
+          width={100}
+          height={100}
+          className="w-24 h-24 block md:hidden object-center object-contain"
+        />
+      ),
       number: '01',
       title: 'Tell Your Friends & Family',
       description:
@@ -176,6 +185,15 @@ const ReferralProgram = () => {
       alignment: 'right',
     },
     {
+      icon: (
+        <Image
+          src="/Image/img3.png"
+          alt="Logo"
+          width={100}
+          height={100}
+          className="w-24 h-24 block md:hidden object-center object-contain"
+        />
+      ),
       number: '02',
       title: 'They Message Us',
       description:
@@ -207,6 +225,15 @@ const ReferralProgram = () => {
       alignment: 'left',
     },
     {
+      icon: (
+        <Image
+          src="/Image/img2.png"
+          alt="Logo"
+          width={100}
+          height={100}
+          className="w-24 h-24 block md:hidden object-center object-contain"
+        />
+      ),
       number: '03',
       title: 'Cash In!',
       description:
@@ -265,7 +292,7 @@ const ReferralProgram = () => {
           </div>
 
           {/* Mobile timeline - visible on mobile only */}
-          <div className="md:hidden absolute left-6 top-0 bottom-0 w-[3px] bg-gray-200 dark:bg-gray-700/30">
+          <div className="md:hidden absolute left-0 top-0 bottom-0 w-[3px] bg-gray-200 dark:bg-gray-700/30">
             <div
               className="w-full bg-gradient-to-b from-blue-500 to-purple-600 origin-top"
               style={{ height: fillHeight.get() }}
@@ -331,34 +358,34 @@ const ReferralProgram = () => {
           )}
         </div>
         <div className='flex items-center justify-center w-full lg:pt-12'>
-        <Link
-          href="https://www.facebook.com/messages/t/betcollective"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="!underline cursor-pointer hover:text-blue-500"
-        >
-          <motion.button
-            className="bg-[#F97316] text-xl mt-6  uppercase hover:cursor-pointer hover:bg-[#F97316] text-white font-bold py-2 sm:py-3 md:py-4 px-4 w-fit sm:w-auto md:px-6 lg:px-12 rounded-md  md:text-2xl duration-300 relative overflow-hidden hover:scale-102 transition-all"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.2, duration: 0.5 }}
-            whileHover={{
-              scale: 1.05,
-            }}
-            whileTap={{ scale: 0.95 }}
+          <Link
+            href="https://www.facebook.com/messages/t/betcollective"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="!underline cursor-pointer hover:text-blue-500"
           >
-            <motion.span
-              className="absolute inset-0 uppercase bg-[#21f916]"
-              initial={{ x: '-100%' }}
-              whileHover={{ x: '100%' }}
-              transition={{ duration: 0.6 }}
-            />
-            MESSAGE US NOW
-          </motion.button>
-        </Link>
+            <motion.button
+              className="bg-[#F97316] text-xl mt-6  uppercase hover:cursor-pointer hover:bg-[#F97316] text-white font-bold py-2 sm:py-3 md:py-4 px-4 w-fit sm:w-auto md:px-6 lg:px-12 rounded-md  md:text-2xl duration-300 relative overflow-hidden hover:scale-102 transition-all"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.2, duration: 0.5 }}
+              whileHover={{
+                scale: 1.05,
+              }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <motion.span
+                className="absolute inset-0 uppercase bg-[#21f916]"
+                initial={{ x: '-100%' }}
+                whileHover={{ x: '100%' }}
+                transition={{ duration: 0.6 }}
+              />
+              MESSAGE US NOW
+            </motion.button>
+          </Link>
+        </div>
       </div>
-      </div>
-   
+
     </div>
   );
 };
