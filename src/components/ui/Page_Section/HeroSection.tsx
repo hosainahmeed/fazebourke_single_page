@@ -66,7 +66,7 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="bg-gradient-to-b from-gray-900 py-12 via-gray-800 to-black md:py-28 flex items-center justify-center">
+    <div className="bg-gradient-to-b min-h-screen from-gray-900 py-12 via-gray-800 to-black md:py-28 flex items-center justify-center">
       <div className=" w-full pt-12 md:pb-28 pb-12  flex items-center px-4 sm:px-6 md:px-8 lg:px-16 md:py-12 relative overflow-hidden">
         {isLoaded && (
           <>
@@ -396,19 +396,19 @@ const HeroSection = () => {
                       windowWidth < 640
                         ? 200
                         : windowWidth < 768
-                          ? 240
-                          : windowWidth > 1650
-                            ? 380
-                            : 500
+                        ? 240
+                        : windowWidth > 1650
+                        ? 380
+                        : 500
                     }
                     height={
                       windowWidth < 640
                         ? 200
                         : windowWidth < 768
-                          ? 240
-                          : windowWidth > 1024
-                            ? 300
-                            : 450
+                        ? 240
+                        : windowWidth > 1024
+                        ? 300
+                        : 450
                     }
                     className="object-contain   !w-[400px]  !h-[400px] xl:!w-[450px] xl:!h-[450px] "
                   />
@@ -458,11 +458,11 @@ const HeroSection = () => {
                       </motion.span>
                     ))}
                   </div>
-                  <span className="text-white ml-2 text-base">
-                    4.9 / 5
-                  </span>
+                  <span className="text-white ml-2 text-base">4.9 / 5</span>
                 </div>
-                <span className='text-base leading-4 underline'>Why People Trust Us</span>
+                <span className="text-xs leading-4 underline">
+                  Why People Trust Us
+                </span>
               </span>
             </motion.div>
           </div>
@@ -517,14 +517,15 @@ const HeroSection = () => {
                     4.9 / 5
                   </span>
                 </div>
-                <span className='text-sm underline leading-4'>Why People Trust Us</span>
+                <span className="text-sm underline leading-4">
+                  Why People Trust Us
+                </span>
               </span>
             </motion.div>
           </motion.div>
         </div>
       </div>
-
-    </div >
+    </div>
   );
 };
 
