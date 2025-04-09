@@ -458,7 +458,7 @@ const HeroSection = () => {
                       </motion.span>
                     ))}
                   </div>
-                  <span className="text-white ml-2 text-base">4.9 / 5</span>
+                  <span className="text-white ml-2 text-sm">4.9 / 5</span>
                 </div>
                 <span className="text-xs leading-4 underline">
                   Why People Trust Us
@@ -474,7 +474,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
           >
-            <motion.div className="flex h-18 items-center mb-1 md:mb-2">
+            <motion.div className="flex h-18 items-center overflow-hidden mb-1 md:mb-2">
               <motion.div
                 className="bg-[#0967FF] rounded-full w-18 h-full flex items-center justify-center mr-3"
                 whileHover={{
@@ -491,7 +491,7 @@ const HeroSection = () => {
               </motion.div>
               <span className="text-white leading-4 text-sm md:text-base lg:text-lg">
                 Facebook Rating
-                <div className="flex items-center">
+                <div className="flex justify-between items-center">
                   <div className="flex text-yellow-400">
                     {['★', '★', '★', '★', '★'].map((star, i) => (
                       <motion.span
@@ -513,7 +513,7 @@ const HeroSection = () => {
                       </motion.span>
                     ))}
                   </div>
-                  <span className="text-white ml-2 text-xs md:text-sm leading-4 lg:text-base">
+                  <span className="text-white  ml-2 text-xs md:text-sm leading-4 lg:text-sm">
                     4.9 / 5
                   </span>
                 </div>
