@@ -13,7 +13,7 @@ function Card({ id, title, description }: CardProps) {
       </div>
       <div className="fill-[#F97316] w-12"></div>
       <h1 className="font-bold text-lg xl:text-3xl text-white">{title}</h1>
-      <p className="teaxt-[10px] xl:text-base text-white leading-6">
+      <p className="text-base xl:text-base text-white leading-6 ">
         {description}
       </p>
     </div>

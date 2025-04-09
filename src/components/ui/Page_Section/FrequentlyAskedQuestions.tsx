@@ -3,7 +3,7 @@ import React from 'react';
 import { Collapse } from 'antd';
 import { CircleMinus, CirclePlus } from 'lucide-react';
 import Link from 'next/link';
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
 const { Panel } = Collapse;
 
 const FrequentlyAskedQuestions = () => {
@@ -53,21 +53,22 @@ const FrequentlyAskedQuestions = () => {
   ];
 
   return (
-    <div style={{
-      backgroundImage: `url(/Image/faq.jpg)`
-    }} className=" relative bg-cover bg-center md:py-28 bg-no-repeat py-10">
+    <div
+      style={{
+        backgroundImage: `url(/Image/faq.jpg)`,
+      }}
+      className=" relative bg-cover bg-center md:py-28 bg-no-repeat py-10"
+    >
       <div className="absolute top-0 left-0 w-full h-full bg-black opacity-80"></div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h1
           className="text-3xl md:text-5xl relative z-[999] mb-6 font-bold text-center text-white  bg-clip-text"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: 'easeOut' }
-          }
+          transition={{ duration: 0.8, ease: 'easeOut' }}
         >
           Frequently Asked Questions
         </motion.h1>
-
 
         <Collapse
           bordered={false}
@@ -87,7 +88,7 @@ const FrequentlyAskedQuestions = () => {
         >
           {faqData.map((faq, index) => (
             <Panel header={faq.question} key={index + 1}>
-              <p className="text-white relative z-[999] text-base sm:text-lg leading-relaxed">
+              <p className="text-white leading-6  relative z-[999]  text-base md:text-lg text-md">
                 {faq.answer}
               </p>
             </Panel>
