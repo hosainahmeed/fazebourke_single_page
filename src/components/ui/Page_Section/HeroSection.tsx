@@ -434,7 +434,7 @@ const HeroSection = () => {
                   className="w-full h-full"
                 />
               </motion.div>
-              <span className="text-white text-base leading-4">
+              <span className="text-white text-[18px] leading-4">
                 Facebook Rating
                 <div className="flex items-center">
                   <div className="flex text-yellow-400">
@@ -458,7 +458,7 @@ const HeroSection = () => {
                       </motion.span>
                     ))}
                   </div>
-                  <span className="text-white ml-2 text-sm">4.9 / 5</span>
+                  <span className="text-white ml-2 text-sm">4.9/5</span>
                 </div>
                 <span className="text-xs leading-4 underline">
                   Why People Trust Us
