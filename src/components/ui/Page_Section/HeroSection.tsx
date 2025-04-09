@@ -66,7 +66,7 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="bg-gradient-to-b  from-gray-900 py-12 via-gray-800 to-black md:py-28 flex items-center justify-center">
+    <div className="bg-gradient-to-b  from-gray-900 py-12 via-gray-800 to-black md:pb-28 flex items-center justify-center">
       <div className=" w-full pt-12 md:pb-28 pb-12  flex items-center px-4 sm:px-6 md:px-8 lg:px-16 md:py-12 relative overflow-hidden">
         {isLoaded && (
           <>
@@ -418,7 +418,7 @@ const HeroSection = () => {
           </motion.div>
 
           {/* Mobile reviews section - better spacing and improved for small screens */}
-          <div className="block lg:hidden mt-6">
+          <div className="block w-fit overflow-hidden lg:hidden mt-6">
             <motion.div className="flex items-center  h-16 sm:mb-2">
               <motion.div
                 className=" rounded-full w-16 h-full  mr-2"
@@ -434,10 +434,10 @@ const HeroSection = () => {
                   className="w-full h-full"
                 />
               </motion.div>
-              <span className="text-white text-[18px] leading-4">
+              <span className="text-white text-base  leading-4">
                 Facebook Rating
-                <div className="flex items-center">
-                  <div className="flex text-yellow-400">
+                <div className="flex pr-1 items-center justify-between">
+                  <div className="flex w-full justify-between text-yellow-400">
                     {['★', '★', '★', '★', '★'].map((star, i) => (
                       <motion.span
                         key={i}
@@ -491,8 +491,8 @@ const HeroSection = () => {
               </motion.div>
               <span className="text-white leading-4 text-sm md:text-base lg:text-lg">
                 Facebook Rating
-                <div className="flex justify-between items-center">
-                  <div className="flex text-yellow-400">
+                <div className="flex justify-between overflow-hidden items-center">
+                  <div className="flex justify-between  w-full font-sm text-yellow-400">
                     {['★', '★', '★', '★', '★'].map((star, i) => (
                       <motion.span
                         key={i}
@@ -513,7 +513,7 @@ const HeroSection = () => {
                       </motion.span>
                     ))}
                   </div>
-                  <span className="text-white  ml-2 text-xs md:text-sm leading-4 lg:text-sm">
+                  <span className="text-white w-full ml-1 text-xs md:text-sm leading-4 lg:text-sm">
                     4.9 / 5
                   </span>
                 </div>
