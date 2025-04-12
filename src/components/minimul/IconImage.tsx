@@ -6,7 +6,7 @@ function IconImage() {
     <div>
       <div className="h-fit w-48 md:w-56 lg:w-64 xl:w-72">
         <Image
-          src="/logo SVG.svg"
+          src="/Frame-3.svg"
           alt="Logo"
           width={400}
           height={400}
