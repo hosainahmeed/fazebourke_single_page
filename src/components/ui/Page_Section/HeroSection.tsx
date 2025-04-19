@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Shield, Lock, Zap } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import IconImage from '@/components/minimul/IconImage';
+import Link from 'next/link';
 const HeroSection = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isLoaded, setIsLoaded] = useState(false);
@@ -171,12 +172,12 @@ const HeroSection = () => {
             BET COLLECTIVE
           </motion.h2>
         </motion.div> */}
-          <div className="z-10 relative">
+          <div className="z-10 relative pointer-events-none">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6 }}
-              className="flex flex-col md:flex-row items-start"
+              className="flex flex-col z-[888] !pointer-events-none md:flex-row items-start"
             >
               {/* Main content column - better responsive margins and sizing */}
               <div className="w-full md:w-3/5 lg:w-1/2">
@@ -228,6 +229,7 @@ const HeroSection = () => {
                 </div>
 
                 {/* CTA text - improved responsive scaling */}
+
                 <motion.h2
                   className="text-green-400  text-3xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-3 sm:mb-4 md:mb-5 lg:mb-6"
                   initial={{ opacity: 0, scale: 0.9 }}
@@ -252,24 +254,26 @@ const HeroSection = () => {
                 </motion.p>
 
                 {/* CTA Button - better responsive sizing and mobile full-width */}
-                <motion.button
-                  className="bg-[#F97316] md:mt-0 mt-3 text-xl mb-3 uppercase hover:cursor-pointer hover:bg-[#F97316] text-white font-bold py-2 sm:py-3 md:py-4 px-4 w-fit sm:w-auto md:px-6 lg:px-12 rounded-md  md:text-2xl duration-300 relative overflow-hidden hover:scale-102 transition-all"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 1.2, duration: 0.5 }}
-                  whileHover={{
-                    scale: 1.05,
-                  }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <motion.span
-                    className="absolute inset-0 uppercase bg-[#F97316]"
-                    initial={{ x: '-100%' }}
-                    whileHover={{ x: '100%' }}
-                    transition={{ duration: 0.6 }}
-                  />
-                  Get Paid $200 Now
-                </motion.button>
+                <Link href="https://m.me/betcollectiveFB" target="_blank">
+                  <motion.button
+                    className="bg-[#F97316] cursor-pointer pointer-events-auto  md:mt-0 mt-3 text-xl mb-3 uppercase hover:bg-[#F97316] text-white font-bold py-2 sm:py-3 md:py-4 px-4 w-fit sm:w-auto md:px-6 lg:px-12 rounded-md  md:text-2xl duration-300 relative overflow-hidden hover:scale-102 transition-all"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 1.2, duration: 0.5 }}
+                    whileHover={{
+                      scale: 1.05,
+                    }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <motion.span
+                      className="absolute inset-0 uppercase bg-[#F97316]"
+                      initial={{ x: '-100%' }}
+                      whileHover={{ x: '100%' }}
+                      transition={{ duration: 0.6 }}
+                    />
+                    Get Paid $200 Now
+                  </motion.button>
+                </Link>
 
                 {/* Trust indicators - improved responsive spacing and icon sizing */}
                 <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4 lg:gap-6 mt-1 sm:mt-5 md:mt-6 lg:mt-8">
@@ -460,9 +464,16 @@ const HeroSection = () => {
                   </div>
                   <span className="text-white ml-2 text-sm">4.9/5</span>
                 </div>
-                <span className="text-xs leading-4 underline">
-                  Why People Trust Us
-                </span>
+                <Link
+                  href="https://www.facebook.com/betcollectiveFB"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center cursor-pointer mt-2"
+                >
+                  <span className="text-xs !z-[999] leading-4 underline">
+                    Why People Trust Us
+                  </span>
+                </Link>
               </span>
             </motion.div>
           </div>
@@ -517,9 +528,16 @@ const HeroSection = () => {
                     4.9 / 5
                   </span>
                 </div>
-                <span className="text-sm underline leading-4">
-                  Why People Trust Us
-                </span>
+                <Link
+                  href="https://www.facebook.com/betcollectiveFB"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center mt-2"
+                >
+                  <span className="text-sm underline !z-[999] !cursor-pointer leading-4">
+                    Why People Trust Us
+                  </span>
+                </Link>
               </span>
             </motion.div>
           </motion.div>
