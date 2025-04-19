@@ -12,7 +12,7 @@ function Footer() {
         </div>
         <div className="flex gap-2 items-center">
           <Link
-            href="https://www.facebook.com/messages/t/betcollective"
+            href="https://www.facebook.com/betcollectiveFB"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -27,7 +27,7 @@ function Footer() {
             </button>
           </Link>
           <Link
-            href="https://www.facebook.com/messages/t/betcollective"
+            href="https://m.me/betcollectiveFB"
             target="_blank"
             rel="noopener noreferrer"
           >

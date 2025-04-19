@@ -69,7 +69,7 @@ function WorkProcess() {
       </div>
       <div>
         <Link
-          href="https://www.facebook.com/messages/t/betcollective"
+          href="https://m.me/betcollectiveFB"
           target="_blank"
           rel="noopener noreferrer"
           className="!underline cursor-pointer hover:text-blue-500"
